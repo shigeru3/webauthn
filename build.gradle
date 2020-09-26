@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'jp.gihyo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+    implementation 'org.webauthn4j:webauthn4j-core:0.13.3.RELEASE'
+}
+
+test {
+	useJUnitPlatform()
+}
