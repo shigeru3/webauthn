@@ -19,9 +19,11 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-    implementation 'org.webauthn4j:webauthn4j-core:0.13.3.RELEASE'
+    implementation 'com.webauthn4j:webauthn4j-core:0.9.14.RELEASE'
+	compile 'org.springframework.boot:spring-boot-devtools'
 }
 
 test {
 	useJUnitPlatform()
 }
+

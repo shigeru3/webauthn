@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebAuthn</title>
+	<link rel="stylesheet" href="css/bundle.css"/>
+</head>
+<body translate="no">
+<div class="login-page">
+	<div class="form">
+		<input type="text" placeholder="Name" value="Someone" id="displayName"/>
+		<input type="text" placeholder="Email" value="webauthn@gihyo.jp" id="email"/>
+		<button onclick="registerAsync()">Create account</button>
+		<p class="message">Do you have account?<a href="signin.html">Login</a></p>
+	</div>
+</div>
+<script src="js/webauthn.js"></script>
+</body>
+</html>
